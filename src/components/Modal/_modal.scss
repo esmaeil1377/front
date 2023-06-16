@@ -1,0 +1,49 @@
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 150px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(217, 103, 103);
+  border-radius: 0.3rem;
+  padding: 10px;
+  background-color: white;
+  .header {
+    height: 32px;
+    .close {
+      right: 0;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      opacity: 0.3;
+      display: block;
+      margin-left: auto;
+    }
+    .close:hover {
+      opacity: 1;
+    }
+    .close:before,
+    .close:after {
+      position: absolute;
+      content: " ";
+      height: 33px;
+      width: 2px;
+      background-color: #333;
+    }
+    .close:before {
+      transform: rotate(45deg);
+    }
+    .close:after {
+      transform: rotate(-45deg);
+    }
+  }
+  .content {
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,183 @@
+.card-container {
+  height: fit-content;
+  transition: all 0.9s;
+  margin: 0 auto;
+  .wrapper .card {
+    width: 430px;
+    height: 160px;
+    border: none;
+    box-shadow: 10px 10px 15px #1f1f1f1a, -10px -10px 15px #1f1f1f1a;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: all 0.9s;
+    border-radius: 12px;
+  }
+
+  .wrapper .card .section-container {
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    background-color: #ffffff;
+    transition: all 0.9s;
+    box-shadow: 10px 10px 15px #1f1f1f1a, -10px -10px 15px #1f1f1f1a;
+    border-radius: 12px;
+  }
+
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      .item {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: max-content;
+        .value {
+          font-weight: 700;
+          font-size: 22px;
+        }
+      }
+    }
+    p {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    .class-type {
+      position: absolute;
+      background-color: red;
+      color: #ffffff;
+      width: fit-content;
+      padding: 0 5px;
+      rotate: 325deg;
+      margin-top: 18px;
+    }
+    .up-section-wrapper {
+      margin-top: auto;
+      .up-section {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        margin-top: auto;
+        .info-part {
+          padding: 0 5px;
+          display: flex;
+          column-gap: 10px;
+          height: min-content;
+          img {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+          }
+          p {
+            margin: 0;
+            font-weight: 300;
+            color: gray;
+            font-size: 12px;
+          }
+          .time {
+            font-weight: 700;
+            font-size: 25px;
+          }
+          .item {
+            max-height: fit-content;
+            height: max-content;
+          }
+        }
+      }
+    }
+    .end-section {
+      .price {
+        margin: auto;
+        width: 150px;
+        text-align: center;
+
+        font-weight: 700;
+        font-size: 23px;
+        border: dashed gray;
+        border-radius: 5px;
+      }
+    }
+  }
+  .wrapper .card .section-container .main-section,
+  .bottom-section {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    z-index: 2;
+  }
+
+  .inner-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-bottom: dashed #b8a8a8;
+    border-radius: 12px;
+    .info-part {
+      .title {
+        font-weight: 700;
+      }
+      .country {
+        font-weight: bold;
+      }
+      .airline {
+        font-weight: 300;
+      }
+    }
+    .info-part,
+    .airplan {
+      div {
+        text-align: center;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 10px;
+      .price {
+        background-color: #b8a8a8;
+        border-radius: 5px;
+        font-weight: 800;
+      }
+    }
+    .airplan {
+      row-gap: 20px;
+      justify-content: end;
+      padding-bottom: 18px;
+      min-width: 100px;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  .wrapper .card .section-container .bottom-section {
+    transform: rotateX(-180deg);
+  }
+
+  .wrapper .card .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .wrapper .card .box .inner-content .tag {
+    font-size: 0.87rem;
+    letter-spacing: 1px;
+  }
+}

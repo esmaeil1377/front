@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  p {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 600;
+  }
+  .logout-button {
+    height: 30px;
+    margin: auto 0;
+  }
+}
